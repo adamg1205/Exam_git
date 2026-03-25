@@ -1,0 +1,5 @@
+USE zegoodcorner;
+
+ALTER TABLE users
+  ADD COLUMN IF NOT EXISTS first_name VARCHAR(120) NOT NULL DEFAULT '' AFTER password_hash,
+  ADD COLUMN IF NOT EXISTS last_name VARCHAR(120) NOT NULL DEFAULT '' AFTER first_name;
